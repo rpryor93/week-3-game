@@ -1,20 +1,65 @@
 <!doctype html>
 <html>
     <head>
-        <title>Hangman HW3</title>
+        <title>psychic game</title>
         <link ref="stylesheet" type="text/css" href="assets/css/style.css">
-        <link ref="script" href="assets/javascript/game.js">
+        
+<script>
+
+ //Game Variables 
+    
+    var guesses = 9;
+    var letters = [
+               "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
+               "p","q","r","s","t","u","v","w","x","y","z"
+               ];
+    var letterToGuess = "";
+    var lettersGuessed = "";
+    var countWins = 0;
+    var countLosses = 0;
+    var gameOver = false;
+        
+
+//This function will initialize game    
+
+function initGame() {
+   var letterIndex = Math.floor(Math.random() * letters.length);
+   letterToGuess = letters[letterIndex];
+   guesses = 9;
+   lettersGuessed = [];
+   gameOver = false;
+   window.addEventListener("keyup",eventKeyPressed,true);
+   drawScreen();
+}
+ 
+//This function will print wins and losses to HTML    
+
+document.getElementById("myBtn").addEventListener("click", displayDate);
+
+function displayWins() {
+    document.getElementById("wins").innerHTML = countWins();
+    
+function displayLosses() {
+    document.getElementById("losses").innerHTML = countLosses();
+    
+</script>   
     </head>
 
 <body>
     
-    
+    <h1>Psychic Game</h1>
     
 
+    <p>LETS TEST THOSE PSYCHIC SKILLS</p>
     
     
+    <p id= "wins">Wins:</p>
     
     
+    <p id= "losses">Losses:</p>
+    
+    
+    <p id = "guesses">Guesses Left:</p>
     
     
     </body>
