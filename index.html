@@ -1,69 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>psychic game</title>
-        <link ref="stylesheet" type="text/css" href="assets/css/style.css">
-        
-<script>
+<head>
+   <title>Psychic Game</title>
+    <link type="text/css" href="assets/css/style.css"
+    <link rel="stylesheet" type="text/css" href="assets/css.reset.css">
+   <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    
+   
+</head>
+<body background ="http://alieninvasion.org/wp-content/uploads/2015/06/dream-680x400.jpg">
 
- //Game Variables 
     
-    var guesses = 9;
-    var letters = [
-               "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
-               "p","q","r","s","t","u","v","w","x","y","z"
-               ];
-    var letterToGuess = "";
-    var lettersGuessed = "";
-    var countWins = 0;
-    var countLosses = 0;
-    var gameOver = false;
-        
-
-//This function will initialize game    
-
-function initGame() {
-   var letterIndex = Math.floor(Math.random() * letters.length);
-   letterToGuess = letters[letterIndex];
-   guesses = 9;
-   lettersGuessed = [];
-   gameOver = false;
-   window.addEventListener("keyup",eventKeyPressed,true);
-   drawScreen();
-}
- 
-//This function will print wins and losses to HTML    
-
-function displayWins() {
-    document.getElementById("wins").innerHTML = countWins();
-    
-function displayLosses() {
-    document.getElementById("losses").innerHTML = countLosses();
-    
-</script>   
-    </head>
-
-<body>
-    
-    <h1>Psychic Game</h1>
-    
-
-    <p>LETS TEST THOSE PSYCHIC SKILLS</p>
-    
-    
-    <p id= "wins">Wins:</p>
-    
-    
-    <p id= "losses">Losses:</p>
-    
-    
-    <p id = "guesses">Guesses Left:</p>
-    
-    
-    </body>
+<div class="welcome_container">
+  <h1>LETS TEST THOSE PSYCHIC SKILLS</h1>
+  <h2>Goal is for you to try and guess the letter that is in my head</h2>
+  <p>Press any letter to start the game.</p>
+</div>
 
 
+<div class="stattracker">
+   
+    <h2>Wins:</h2> <ul class="text-center" id="numberOfWins"></ul>
+            <br>
+    <h2>Losses:</h2> <ul class="text-center"
+    id="numberOfLosses"></ul>
+            <br>
+    <h2>Guesses Left:</h2> <ul class="text-center" id="guessesLeft"></ul>
+            <br>
+     
+</div>   
 
-
-
+    <script src="assets/javascript/game.js"></script>
+    
+</body>
 </html>

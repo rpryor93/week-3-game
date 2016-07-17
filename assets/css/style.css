@@ -1,0 +1,35 @@
+.welcome_container {color: white;    
+                    box-sizing: border-box;
+                    margin: 10px;
+                    padding: 10px;
+                    width: 700px;
+                    text-align: center;
+                    background-color: black;
+                    align-items: center;
+                     font-family: fantasy;
+                    position: relative;
+                    left:400px;
+                    top:200px;
+                    
+
+}
+
+
+.stattracker {background-color: paleturquoise;
+              text-align: center;
+               color: black;
+               width: 500px;
+               font-family: fantasy;
+               font-size: 20px;
+               position: relative;
+               left: 500px;
+               top: 300px;
+}
+
+#border {border-style: solid;
+         border-color: paleturquoise;
+         border-width: 5px;}
+
+#border2 {border-style: solid;
+          border-color: black;
+          border-width: 5px;}
